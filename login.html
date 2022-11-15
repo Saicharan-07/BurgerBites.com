@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BurgerBites.com</title>
+        <link rel="shortcut icon" type="image" href="logo.png">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: azure;
+            }
+            .login-wrapper{
+                position: relative;
+                background-color: black;
+                padding: 50px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+            }
+            #rapo{
+                font-weight: 500;
+                border-left: 15px solid #1dd1a1;
+                padding-left: 10px;
+                line-height: 1em;
+                color: white;
+            }
+            .login-wrapper .input-group{
+                position: relative;
+            }
+            .submit-btn{
+                position: relative;
+                width: 100%;
+                padding: 10px 15px;
+                outline: none;
+                border: 2px solid ;
+                font-size: 1em;
+                cursor: pointer;
+                background-color: darkorange;
+            }
+            .input-group{color: white;}
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        <div class="login-wrapper">
+            <form action="" class="form">
+                <h2 id="rapo">login</h2>
+                <div class="input-group">
+                    <input type="text" name="loginUser" id="email" required />
+                    <label for="loginuser">Email Address</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="loginPassword" id="password" required />
+                    <label for ="loginPassword">Password</label>
+                </div>
+                <input type="submit" value="Login" class="submit-btn" onclick="auth()" />
+            </form>
+        </div>
+        <script>
+            function auth(){
+                var email=document.getElementById("email").value;
+                var password=document.getElementById("password").value;
+                if(email=="ganesh@gmail.com" && password=="admin123"){
+                    window.location.assign("res.html");
+                    alert("login successfully");
+
+                }
+                else{
+                    alert("invalid information");
+                    return;
+                }
+            }
+        </script>
+    </body>
+</html>
